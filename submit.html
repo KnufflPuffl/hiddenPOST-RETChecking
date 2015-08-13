@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <title>Submit Form</title>
+
+    <!-- All Stylesheets -->
+    <link rel="stylesheet" href="css/All-Stylesheets.css">
+
+    <script type="text/javascript" src="Order_Overview.js"></script>
+
+</head>
+
+<body>
+    <!-- Page Contents Starts
+            ================================================== -->
+    <div data-role="page" id="grusskarten_details" data-theme="d">
+        <!-- header Starts -->
+        <div data-role="header" data-position="fixed" data-theme="f" class="header">
+            <!-- The Header_Navigation Extension is supposed to add The Header Content here !-->
+        </div>
+
+
+        <!-- header Ends -->
+        <div data-role="content">
+            <!-- Slider Starts -->
+
+            <!-- Slider Ends -->
+
+
+            <!-- Add Your Page Content Here that you NOT want to be zoomable !-->
+            <!--<p>some Content...</p>!-->
+            <div class="stepCount" >
+                <p>Ihre Bestellung<span>Schritt 9 von 9</span></p>
+            </div>
+            
+            <!-- Draggable Horizontal Menue !-->
+            <div class="ajax-loader">
+				<img src="images/ajax-loader.gif" />
+			</div> 
+
+			
+			<div id="error" style="display: none;">
+				<div class="error_message">
+					
+				</div>
+				<button onclick="closeError()">Okay</button>
+			</div>
+			
+            <!-- Add Your Page Content Here that yo WANT to be zoomable inside Scroller as LI Element !-->
+            
+            <div id="wrapper" class="wrapper">
+	                <div id="scroller">
+                    <ul id="scrollable-content">
+                        
+                         <li style="width:90%; margin-left:5%; float:left;">
+                        	
+                            <img width="100%" id="final_img" src="" />
+                            
+                                <div id="order">
+                                	
+                                    
+                                    
+                                </div>
+
+                            <a class="btn_cyan" locked onclick="order();">zahlungspflichtig bestellen</a>
+
+                            
+                        </li>
+                    </ul>
+         
+
+                
+            </div>
+            
+            
+            
+            <!-- Form hidden to submit the Data, similar to ApoApp Rezeptscanner !-->
+           <form id="myForm" action="http://blumenkonfigurator-app.backend.1000ideen.at/index.php/order/create" method="post" target="submit_frame">
+
+                        
+                        <!-- Storage Data, contains all order Data JSON stringified -> ShoppingCard --> 
+                        <input type="hidden" id="data" name="data" value="" data-role="none">
+
+			    </form>
+            
+            
+			<iframe id="submit_frame" name="submit_frame" src="" style="display:none;" ></iframe>
+ 
+    
+    
+        </div>
+        <!-- Content Role Ends !-->
+
+
+
+        <!-- Right Panel Starts
+                ================================================== -->
+        <div data-role="panel" id="right-panel" data-position="right" data-display="overlay">
+
+            <!-- Main Menu Starts !-->
+            <div id="accordion">
+                <ul id="items">
+                    <!-- The RightPanel Menue Extension is adding the Items from the Configuration here !-->
+                </ul>
+            </div>
+            <!-- Main Menu Ends !-->
+
+        </div>
+        <!-- Right Panel Ends !-->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
